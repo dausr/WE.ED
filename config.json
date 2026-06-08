@@ -1,0 +1,15 @@
+{
+    "clip_pools": [
+        "H:\\\\repos\\\\NFOs\\\\Clips",
+        "H:\\\\raw_vidz\\\\grok\\\\_16ZU9",
+        "H:\\\\raw_vidz\\\\grok\\\\_new___",
+        "H:\\\\raw_vidz\\\\grok\\\\1zu1",
+        "H:\\\\raw_vidz\\\\grok\\\\9zu16",
+        "./clips"
+    ],
+    "mp3_folder": "./mp3s",
+    "output_folder": "./done",
+    "max_clips_per_video": 50,
+    "low_vram_mode": false,
+    "gender_boost": true
+}

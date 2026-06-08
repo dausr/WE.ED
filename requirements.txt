@@ -1,0 +1,12 @@
+librosa>=0.10.0
+numpy
+torch torchvision torchaudio
+moviepy
+mutagen
+ffmpeg-python
+pillow
+scikit-learn
+tqdm
+opencv-python
+matplotlib
+pandas
