@@ -1,0 +1,42 @@
+"""Example Configuration - Hip-Hop Music Video"""
+
+audio:
+  sample_rate: 44100
+  n_fft: 2048
+  hop_length: 512
+  min_bpm: 80
+  max_bpm: 130
+
+video:
+  resolution: "1920x1080"
+  frame_rate: 30
+  codec: "libx264"
+  preset: "medium"
+  bitrate: "8500k"
+
+clip_selection:
+  avoid_repeats: true
+  max_repeat_distance: 4  # Vary clips frequently
+  semantic_threshold: 0.6  # More relaxed matching for style variety
+  diversity_factor: 0.4  # More diversity
+
+transitions:
+  blend_fade: true
+  fade_duration: 0.2  # Quick cuts for hip-hop feel
+  wobble_intensity: 0.7  # Moderate wobble
+  wobble_frequency: 5.0  # Fast wobble on beat
+  zoom_direction: "center_outward"
+  stutter_effect: true
+  stutter_frames: 4  # More stutter for impact
+
+output:
+  version_format: "{original_name}_v{version:03d}"
+  auto_versioning: true
+  preserve_aspect_ratio: true
+  no_black_bars: true
+  output_format: "mp4"
+
+semantics:
+  embedding_model: "clip-vit-base-patch32"
+  device: "cuda"
+  batch_size: 32

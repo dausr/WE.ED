@@ -1,0 +1,42 @@
+"""Example Configuration - Energetic Dance Music Video"""
+
+audio:
+  sample_rate: 44100
+  n_fft: 2048
+  hop_length: 512
+  min_bpm: 80
+  max_bpm: 180
+
+video:
+  resolution: "1920x1080"  # 16:9 Standard
+  frame_rate: 30
+  codec: "libx264"
+  preset: "medium"
+  bitrate: "8000k"
+
+clip_selection:
+  avoid_repeats: true
+  max_repeat_distance: 5
+  semantic_threshold: 0.7
+  diversity_factor: 0.35  # More diversity for dance videos
+
+transitions:
+  blend_fade: true
+  fade_duration: 0.25  # Shorter transitions for energetic feel
+  wobble_intensity: 0.9  # Strong wobble effect
+  wobble_frequency: 4.0  # Fast wobble for dance beats
+  zoom_direction: "center_outward"
+  stutter_effect: true
+  stutter_frames: 3
+
+output:
+  version_format: "{original_name}_v{version:03d}"
+  auto_versioning: true
+  preserve_aspect_ratio: true
+  no_black_bars: true
+  output_format: "mp4"
+
+semantics:
+  embedding_model: "clip-vit-base-patch32"
+  device: "cuda"  # Use GPU for speed
+  batch_size: 32

@@ -1,0 +1,42 @@
+"""Example Configuration - Calm Ambient Music Video"""
+
+audio:
+  sample_rate: 44100
+  n_fft: 2048
+  hop_length: 512
+  min_bpm: 60
+  max_bpm: 100
+
+video:
+  resolution: "1920x1080"
+  frame_rate: 24  # Lower FPS for cinematic feel
+  codec: "libx264"
+  preset: "slower"  # Better quality
+  bitrate: "10000k"
+
+clip_selection:
+  avoid_repeats: true
+  max_repeat_distance: 8  # Longer gaps between repeats
+  semantic_threshold: 0.8  # Higher threshold for cohesion
+  diversity_factor: 0.2  # Less random variation
+
+transitions:
+  blend_fade: true
+  fade_duration: 0.8  # Longer, slower transitions
+  wobble_intensity: 0.3  # Subtle wobble
+  wobble_frequency: 1.0  # Slow wobble
+  zoom_direction: "center_outward"
+  stutter_effect: false  # No stutter for calm mood
+  stutter_frames: 0
+
+output:
+  version_format: "{original_name}_v{version:03d}"
+  auto_versioning: true
+  preserve_aspect_ratio: true
+  no_black_bars: true
+  output_format: "mp4"
+
+semantics:
+  embedding_model: "clip-vit-base-patch32"
+  device: "cuda"
+  batch_size: 16
