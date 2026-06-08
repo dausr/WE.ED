@@ -1,0 +1,48 @@
+# WE.ED Framework - Default Configuration
+
+# Audio Settings
+audio:
+  sample_rate: 44100
+  n_fft: 2048
+  hop_length: 512
+  min_bpm: 80
+  max_bpm: 180
+
+# Video Output Settings
+video:
+  resolution: "1920x1080"  # 16:9 Standard
+  frame_rate: 30
+  codec: "libx264"
+  preset: "medium"
+  bitrate: "8000k"
+
+# Clip Selection Settings
+clip_selection:
+  avoid_repeats: true
+  max_repeat_distance: 5  # Clips mindestens 5 Sekunden auseinander
+  semantic_threshold: 0.7  # Semantic Similarity Threshold
+  diversity_factor: 0.3    # Zufalls-Faktor für Varianz
+
+# Transition Effects
+transitions:
+  blend_fade: true
+  fade_duration: 0.3  # seconds
+  wobble_intensity: 0.8
+  wobble_frequency: 3.0
+  zoom_direction: "center_outward"
+  stutter_effect: true
+  stutter_frames: 3
+
+# Output Settings
+output:
+  version_format: "{original_name}_v{version:03d}"
+  auto_versioning: true
+  preserve_aspect_ratio: true
+  no_black_bars: true
+  output_format: "mp4"
+
+# Semantic Analysis
+semantics:
+  embedding_model: "clip-vit-base-patch32"  # OpenAI CLIP Model
+  device: "cuda"  # or "cpu"
+  batch_size: 32
